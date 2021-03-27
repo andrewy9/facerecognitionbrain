@@ -11,7 +11,8 @@ import FaceRecognition from './components/FaceRecognition/FaceRecognition'
 import './App.css';
 
 const app = new Clarifai.App({
-  apiKey: `${process.env.CLIENT_KEY}`
+  // apiKey: `${process.env.CLIENT_KEY}`
+  apiKey: '657be9609d284448872f7214fadf3619'
 });
 
 const particlesOptions = {
