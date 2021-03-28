@@ -91,7 +91,7 @@ class App extends Component {
 
   onButonSubmit = () => {
     this.setState({ imageUrl: this.state.input }) //lets try a callback setState with img later!
-    fetch('http://localhost:3001/imageUrl', {
+    fetch('https://sleepy-beach-76200.herokuapp.com//imageUrl', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -101,7 +101,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('http://localhost:3001/image', {
+          fetch('https://sleepy-beach-76200.herokuapp.com/:3001/image', {
             method: 'put',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
