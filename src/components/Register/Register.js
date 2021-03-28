@@ -34,12 +34,10 @@ class Register extends Component {
       })
     })
       .then(response => {
-        console.log(response)
         return response.json()
       })
       .then(user => {
-        console.log(user)
-        if (user) {
+        if (user.id) {
           this.props.loadUser(user)
           this.props.onRouteChange('home')
         }
@@ -47,7 +45,6 @@ class Register extends Component {
   }
 
   render() {
-    const { onRouteChange } = this.props;
     return (
       <article className="br3 ba b--black-10 mv4 w-100 w-50-m w-25-l mw6 shadow-5 center" >
         <main className="pa4 black-80">
